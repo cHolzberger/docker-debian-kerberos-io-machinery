@@ -1,17 +1,11 @@
-FROM mosaiksoftware/debian
+FROM mosaiksoftware/debian:onbuild
 MAINTAINER  Chrisitan Holzberger <ch@mosaiksoftware.de>
 
-ENV DEBIAN_FRONTEND noninteractive
 ##### PACKAGE INSTALLATION #####
-COPY ./config/dpkg_nodoc /etc/dpkg/dpkg.conf.d/01_nodoc
-
-COPY ./config/apt_nosystemd /etc/apt/preferences.d/systemd
-RUN echo "Yes, do as I say!" | apt-get remove -y --force-yes --purge --auto-remove systemd sysv-rc
-# get sources 
-COPY config/source.list /etc/apt/sources.list
 RUN mkdir /capture && \
- 	chmod 777 /capture && \
-	/set-selections.sh machinery-build 		
+ 	chmod 777 /capture 
+
+RUN set-selections machinery-build
 #FFMPEG FROM SOURCE
 RUN echo "include /usr/local/lib" >> /etc/ld.so.conf
 COPY ./ffmpeg /usr/src/ffmpeg
