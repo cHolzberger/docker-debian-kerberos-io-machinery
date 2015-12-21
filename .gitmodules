@@ -1,0 +1,6 @@
+[submodule "machinery"]
+	path = machinery
+	url = https://github.com/kerberos-io/machinery
+[submodule "ffmpeg"]
+	path = ffmpeg
+	url = git://source.ffmpeg.org/ffmpeg.git

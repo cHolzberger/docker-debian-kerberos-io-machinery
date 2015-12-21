@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<captures>
+
+    <IPCamera>
+        <url type="text">[[url]]</url>
+        <frameWidth type="number">640</frameWidth>
+        <frameHeight type="number">480</frameHeight>
+        <delay type="number">500</delay>
+        <angle type="number">0</angle>
+    </IPCamera>
+
+    <USBCamera>
+        <frameWidth type="number">800</frameWidth>
+        <frameHeight type="number">640</frameHeight>
+        <delay type="number">500</delay>
+        <angle type="number">0</angle>
+    </USBCamera>
+
+    <RaspiCamera>
+        <frameWidth type="number">800</frameWidth>
+        <frameHeight type="number">640</frameHeight>
+        <delay type="number">500</delay>
+        <angle type="number">0</angle>
+    </RaspiCamera>
+
+</captures>
